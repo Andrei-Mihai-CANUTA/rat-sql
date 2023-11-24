@@ -45,7 +45,7 @@ def add_parser():
 
 def main(args):
     if args.config_args:
-        config = json.loads(_jsonnet.evaluate_file(args.config, tla_codes={'args': args.config_args}))
+        config = json.loads(_jsonnet.evaluate_file("rat-sql/" + args.config, tla_codes={'args': args.config_args}))
     else:
         config = json.loads(_jsonnet.evaluate_file(args.config))
 
